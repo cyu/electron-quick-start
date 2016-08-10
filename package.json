@@ -1,31 +1,30 @@
 {
-  "name": "electron-quick-start",
+  "name": "kiosk-template",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A Electron template for building Kiosk applications",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/cyu/kiosk-template.git"
   },
   "keywords": [
     "Electron",
     "quick",
     "start",
-    "tutorial"
+    "kiosk"
   ],
-  "author": "GitHub",
+  "author": "Calvin Yu",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/cyu/kiosk-template/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/cyu/kiosk-template#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "electron-settings": "^2.1.1"
   }
 }
