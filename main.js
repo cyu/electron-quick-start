@@ -4,11 +4,17 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
+const kiosk = require('./kiosk')
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
+  if ('beforeWindow' in kiosk) {
+    kiosk.beforeWindow()
+  }
+
   // Create the browser window.
   mainWindow = new BrowserWindow({frameless: true, fullscreen: true})
 
@@ -25,6 +31,10 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  if ('afterWindow' in kiosk) {
+    kiosk.afterWindow(mainWindow)
+  }
 }
 
 // This method will be called when Electron has finished
